@@ -8,7 +8,13 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
 from email.mime.multipart import MIMEMultipart
+from fake_useragent import UserAgent
 
+options = Options()
+ua = UserAgent()
+userAgent = ua.random
+print(userAgent)
+options.add_argument(f'user-agent={userAgent}')
 chrome_options = webdriver.ChromeOptions()
 chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
 chrome_options.add_argument("--headless")
