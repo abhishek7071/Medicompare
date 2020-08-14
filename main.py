@@ -11,7 +11,7 @@ driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), c
 driver.get("https://www.google.com/")
 #driver.get_screenshot_as_file("screenshot.png")
 driver.implicitly_wait(50)
-driver.get_screenshot_as_file("screenshot.png")
+driver.get_screenshot_as_file("image.png")
 image = Image.open("image.png") 
 image.show() 
 print(driver.page_source)
