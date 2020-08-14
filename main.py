@@ -9,14 +9,10 @@ chrome_options.add_argument("--disable-dev-shm-usage")
 chrome_options.add_argument("--no-sandbox")
 driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
 driver.get("https://www.google.com/")
-driver.get_screenshot_as_file("screenshot.png")
+#driver.get_screenshot_as_file("screenshot.png")
 driver.implicitly_wait(50)
-
-image.show() 
-
 driver.get_screenshot_as_file("screenshot.png")
 image = Image.open("image.png") 
-
-
+image.show() 
 print(driver.page_source)
 
