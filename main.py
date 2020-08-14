@@ -44,4 +44,4 @@ def send_mail():
   s.quit()
   
 send_mail()
-time.sleep(20)
+time.sleep(3600)
