@@ -28,9 +28,10 @@ gmail_id="aman765180"
 password ="Neesu@1234"
 driver.get('https://stackoverflow.com/users/signup?ssrc=head&returnurl=%2fusers%2fstory%2fcurrent%27')  # signing in to google through stack overflow
 time.sleep(2)
-driver.find_element_by_xpath('//*[@id="openid-buttons"]/button[1]').click()  # signing in with google
-driver.find_element_by_xpath('//input[@type="email"]').send_keys(gmail_id)  # entering the gmail id
-driver.find_element_by_xpath('//*[@id="identifierNext"]').click()
+loginBox = driver.find_element_by_xpath('//*[@id ="identifierId"]') 
+loginBox.send_keys(gmail_id) 
+nextButton = driver.find_elements_by_xpath('//*[@id ="identifierNext"]') 
+nextButton[0].click() 
 time.sleep(10)
 #ime.sleep(2)
 print("done")
