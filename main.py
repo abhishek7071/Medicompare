@@ -66,7 +66,7 @@ def send_mail():
   s.ehlo()
   s.starttls()
   s.ehlo()
-  s.login('aman765180@gmail.com', 'Neesu@123')
+  s.login('aman765180@gmail.com', 'Neesu@1234')
   s.sendmail('aman765180@gmail.com','abhishek7071631646@gmail.com' , msg.as_string())
   s.quit()
   
