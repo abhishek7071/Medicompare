@@ -30,11 +30,12 @@ driver.get('https://stackoverflow.com/users/signup?ssrc=head&returnurl=%2fusers%
 sleep(2)
 driver.find_element_by_xpath('//*[@id="openid-buttons"]/button[1]').click()  # signing in with google
 driver.find_element_by_xpath('//input[@type="email"]').send_keys(gmail_id)  # entering the gmail id
-driver.find_element_by_xpath('//*[@id="identifierNext"]').click()
-sleep(2)
-driver.find_element_by_xpath('//input[@type="password"]').send_keys(gmail_password)  # entering the password
+#driver.find_element_by_xpath('//*[@id="identifierNext"]').click()
+#driver.find_element_by_xpath('//*[@id="identifierNext"]').click()
+#sleep(2)
+#driver.find_element_by_xpath('//input[@type="password"]').send_keys(gmail_password)  # entering the password
 #driver.find_element_by_xpath('//*[@id="passwordNext"]').click()
-sleep(2)
+#sleep(2)
 print('Login Successful...!!')
 #driver.implicitly_wait(50)
 #driver.get('https://meet.google.com/hmk-urey-myq')
