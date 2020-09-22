@@ -47,7 +47,7 @@ password ="Neesu@1234"
 driver.get('https://meet.google.com/iee-boav-seb')
 sleep(5)
 
-web.save_screenshot("image.png")
+driver.save_screenshot("image.png")
 image = Image.open("image.png") 
 
   
