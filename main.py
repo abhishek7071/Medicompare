@@ -33,7 +33,7 @@ driver.find_element_by_xpath('//input[@type="email"]').send_keys(gmail_id)  # en
 driver.find_element_by_xpath('//*[@id="identifierNext"]').click()
 sleep(2)
 driver.find_element_by_xpath('//input[@type="password"]').send_keys(gmail_password)  # entering the password
-driver.find_element_by_xpath('//*[@id="passwordNext"]').click()
+#driver.find_element_by_xpath('//*[@id="passwordNext"]').click()
 sleep(2)
 print('Login Successful...!!')
 #driver.implicitly_wait(50)
