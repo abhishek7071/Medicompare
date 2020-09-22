@@ -25,27 +25,20 @@ chrome_options.add_argument("--disable-dev-shm-usage")
 chrome_options.add_argument("--no-sandbox")
 driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
 gmail_id="aman765180"
-password ="Neesu@1234"
-#driver.get('https://stackoverflow.com/users/signup?ssrc=head&returnurl=%2fusers%2fstory%2fcurrent%27')  # signing in to google through stack overflow
-#time.sleep(2)
-#loginBox = driver.find_element_by_xpath('//*[@id ="identifierId"]') 
-#loginBox.send_keys(gmail_id) 
-#nextButton = driver.find_elements_by_xpath('//*[@id ="identifierNext"]') 
-#nextButton[0].click() 
-#time.sleep(10)
-#ime.sleep(2)
-#print("done")
-#driver.find_element_by_xpath('//input[@type="password"]').send_keys(gmail_password)  # entering the password
-#driver.find_element_by_xpath('//*[@id="passwordNext"]').click()
-# put your google account password here
-#passWordBox = driver.find_element_by_xpath('//*[@id ="password"]/div[1]/div / div[1]/input') 
-#passWordBox.send_keys(password) 
-#nextButton = driver.find_elements_by_xpath('//*[@id ="passwordNext"]') 
-#nextButton[0].click() 
-#print('Login Successful...!!')
+gmail_password ="Neesu@1234"
+driver.get('https://stackoverflow.com/users/signup?ssrc=head&returnurl=%2fusers%2fstory%2fcurrent%27')  # signing in to google through stack overflow
+sleep(2)
+driver.find_element_by_xpath('//*[@id="openid-buttons"]/button[1]').click()  # signing in with google
+driver.find_element_by_xpath('//input[@type="email"]').send_keys(gmail_id)  # entering the gmail id
+driver.find_element_by_xpath('//*[@id="identifierNext"]').click()
+sleep(2)
+driver.find_element_by_xpath('//input[@type="password"]').send_keys(gmail_password)  # entering the password
+driver.find_element_by_xpath('//*[@id="passwordNext"]').click()
+sleep(2)
+print('Login Successful...!!')
 #driver.implicitly_wait(50)
-driver.get('https://meet.google.com/hmk-urey-myq')
-sleep(5)
+#driver.get('https://meet.google.com/hmk-urey-myq')
+#sleep(5)
 
 driver.save_screenshot("image.png")
 image = Image.open("image.png") 
