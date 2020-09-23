@@ -31,7 +31,7 @@ sleep(2)
 driver.find_element_by_xpath('//*[@id="openid-buttons"]/button[1]').click()  # signing in with google
 driver.find_element_by_xpath('//input[@type="email"]').send_keys(gmail_id)  # entering the gmail id
 driver.find_element_by_xpath('').click()
-driver.find_element_by_xpath('//*[@jscontroller="soHxf"]').click()
+driver.find_element_by_xpath('//button[@jscontroller="soHxf"]').click()
 #sleep(2)
 #driver.find_element_by_xpath('//input[@type="password"]').send_keys(gmail_password)  # entering the password
 #driver.find_element_by_xpath('//*[@id="passwordNext"]').click()
