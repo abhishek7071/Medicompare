@@ -30,7 +30,7 @@ driver.get('https://stackoverflow.com/users/signup?ssrc=head&returnurl=%2fusers%
 sleep(2)
 driver.find_element_by_xpath('//*[@id="openid-buttons"]/button[1]').click()  # signing in with google
 driver.find_element_by_xpath('//input[@type="email"]').send_keys(gmail_id)  # entering the gmail id
-driver.find_element_by_xpath('html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div/div[1]/div/div/button/div[2]').click()
+driver.find_element_by_xpath('/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div/div[1]/div/div/button/div[2]').click()
 #driver.find_elements_by_xpath('/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div/div[1]/div/div/button/div[2]')
 #driver.find_element_by_xpath('//*[@id="identifierNext"]').click()
 #driver.find_element_by_xpath('//*[@id="identifierNext"]').click()
