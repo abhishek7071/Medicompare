@@ -28,7 +28,7 @@ gmail_id="abhishek7071631646@gmail.com"
 gmail_password ="Neesu@1234"
 driver.get('https://globalpage-prod.webex.com/signin?surl=https%3A%2F%2Fsignin.webex.com%2Fcollabs%2Fauth%3F')
 #driver.find_element_by_xpath('//*[@id="smartJoinButton"]').click()
-driver.find_element_by_xpath("//input[@type='text']").send_keys(gmail_id)
+driver.find_element_by_xpath("//input[@type="text"]").send_keys(gmail_id)
 driver.find_element_by_xpath('//button[@class="el-button next el-button--primary"]').click()
 time.sleep(3)
 #driver.get('https://stackoverflow.com/users/signup?ssrc=head&returnurl=%2fusers%2fstory%2fcurrent%27')  # signing in to google through stack overflow
