@@ -24,14 +24,19 @@ chrome_options.add_argument("--headless")
 chrome_options.add_argument("--disable-dev-shm-usage")
 chrome_options.add_argument("--no-sandbox")
 driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
-gmail_id="aman765180"
+gmail_id="abhishek7071631646@gmail.com"
 gmail_password ="Neesu@1234"
-driver.get('https://stackoverflow.com/users/signup?ssrc=head&returnurl=%2fusers%2fstory%2fcurrent%27')  # signing in to google through stack overflow
-sleep(2)
-driver.find_element_by_xpath('//*[@id="openid-buttons"]/button[1]').click()  # signing in with google
-driver.find_element_by_xpath('//input[@type="email"]').send_keys(gmail_id)  # entering the gmail id
-driver.find_element_by_xpath('').click()
-driver.find_element_by_xpath('//div[@class='VfPpkd-RLmnJb']').click()
+driver.get('https://globalpage-prod.webex.com/signin?surl=https%3A%2F%2Fsignin.webex.com%2Fcollabs%2Fauth%3F')
+#driver.find_element_by_xpath('//*[@id="smartJoinButton"]').click()
+driver.find_element_by_xpath('//input[@type="text"]').send_keys(gmail_id)
+driver.find_element_by_xpath('//button[@class="el-button next el-button--primary"]').click()
+time.sleep(3)
+#driver.get('https://stackoverflow.com/users/signup?ssrc=head&returnurl=%2fusers%2fstory%2fcurrent%27')  # signing in to google through stack overflow
+#sleep(2)
+#driver.find_element_by_xpath('//*[@id="openid-buttons"]/button[1]').click()  # signing in with google
+#driver.find_element_by_xpath('//input[@type="email"]').send_keys(gmail_id)  # entering the gmail id
+#driver.find_element_by_xpath('').click()
+#driver.find_element_by_xpath('//div[@class='VfPpkd-RLmnJb']').click()
 #sleep(2)
 #driver.find_element_by_xpath('//input[@type="password"]').send_keys(gmail_password)  # entering the password
 #driver.find_element_by_xpath('//*[@id="passwordNext"]').click()
