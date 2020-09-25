@@ -49,7 +49,7 @@ print('Login Successful...!!')
 #sleep(5)
 
 driver.save_screenshot("image.png")
-image = Image.open("image.png") 
+#image = Image.open("image.png") 
 
   
 # Showing the iamge 
