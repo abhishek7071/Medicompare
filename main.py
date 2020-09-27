@@ -30,7 +30,7 @@ driver.get('https://globalpage-prod.webex.com/signin?surl=https%3A%2F%2Fsignin.w
 time.sleep(8)
 
 #driver.find_element_by_xpath('//*[@id="smartJoinButton"]').click()
-time.sleep(5)
+#time.sleep(5)
 driver.find_element_by_xpath('//input[@type="text"]').send_keys(gmail_id)
 time.sleep(5)
 driver.find_element_by_xpath("//span[contains(.,'Next')]").click()
@@ -45,7 +45,7 @@ driver.execute_script("window.open('');")
 #driver.find_element_by_tag_name('body').send_keys(Keys.CONTROL + 't')
 driver.get('https://meetingsapac49.webex.com/webappng/sites/meetingsapac49/meeting/download/ec5004db3c532924b8b2875860bfa864?launchApp=true&correlationId=84877e51-f66a-4210-bdcd-46fc1af77683')
 #driver.find_element_by_xpath('//*[@id="smartJoinButton"]').click()
-#time.sleep(10)
+time.sleep(10)
 #print(driver.page_source)
 f=open("a.txt","w+")
 #
