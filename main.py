@@ -24,8 +24,33 @@ chrome_options.add_argument("--headless")
 chrome_options.add_argument("--disable-dev-shm-usage")
 chrome_options.add_argument("--no-sandbox")
 driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
-gmail_id="aman765180@gmail.com"
-gmail_password ="Neesu@1234"
+gmail_id="sandhya765180@gmail.com"
+gmail_pass="Neesu@123"
+driver.get('https://globalpage-prod.webex.com/signin?surl=https%3A%2F%2Fsignin.webex.com%2Fcollabs%2Fauth%3Fservice%3Dit%26from%3Dhostmeeting%26TrackID%3D%26hbxref%3D%26goid%3Dhost-meeting')
+time.sleep(8)
+
+#driver.find_element_by_xpath('//*[@id="smartJoinButton"]').click()
+time.sleep(5)
+driver.find_element_by_xpath('//input[@type="text"]').send_keys(gmail_id)
+time.sleep(5)
+driver.find_element_by_xpath("//span[contains(.,'Next')]").click()
+#driver.find_element_by_xpath('').click()
+time.sleep(4)
+driver.find_element_by_xpath('//input[@placeholder="Password"]').send_keys(gmail_pass)
+time.sleep(3)
+driver.find_element_by_xpath('//span[contains(.,"Next")]').click()
+driver.implicitly_wait(10)
+driver.execute_script("window.open('');")
+driver.switch_to.window(driver.window_handles[1])
+#driver.find_element_by_tag_name('body').send_keys(Keys.CONTROL + 't')
+driver.get('https://meetingsapac49.webex.com/webappng/sites/meetingsapac49/meeting/download/ec5004db3c532924b8b2875860bfa864?launchApp=true&correlationId=84877e51-f66a-4210-bdcd-46fc1af77683')
+#driver.find_element_by_xpath('//*[@id="smartJoinButton"]').click()
+time.sleep(10)
+print(driver.page_source)
+f=open("a.txt","w+")
+f.write(driver.page_source)
+#driver.find_element_by_xpath("//button[@title='Join meeting']").click()
+#time.sleep(3)
 #driver.get('https://globalpage-prod.webex.com/signin?surl=https%3A%2F%2Fsignin.webex.com%2Fcollabs%2Fauth%3F')
 #time.sleep(3)
 #driver.find_element_by_xpath('//*[@id="smartJoinButton"]').click()
@@ -33,14 +58,14 @@ gmail_password ="Neesu@1234"
 #time.sleep(3)
 #driver.find_element_by_xpath('//button[@class="el-button next el-button--primary"]').click()
 #time.sleep(3)
-driver.get('https://stackoverflow.com/users/signup?ssrc=head&returnurl=%2fusers%2fstory%2fcurrent%27')  # signing in to google through stack overflow
-sleep(2)
-driver.find_element_by_xpath('//*[@id="openid-buttons"]/button[1]').click()  # signing in with google
-time.sleep(3)
-driver.find_element_by_xpath('//input[@type="email"]').send_keys(gmail_id)  # entering the gmail id
-time.sleep(10)
-f= open("a.txt","w+")
-f.write(driver.page_source)
+#driver.get('https://stackoverflow.com/users/signup?ssrc=head&returnurl=%2fusers%2fstory%2fcurrent%27')  # signing in to google through stack overflow
+#sleep(2)
+#driver.find_element_by_xpath('//*[@id="openid-buttons"]/button[1]').click()  # signing in with google
+#time.sleep(3)
+#driver.find_element_by_xpath('//input[@type="email"]').send_keys(gmail_id)  # entering the gmail id
+#time.sleep(10)
+#f= open("a.txt","w+")
+#f.write(driver.page_source)
 
 #wait = WebDriverWait(driver, 20)
 #wait.until(EC.presence_of_element_located((By.ID, "identifierNext"))).click()
