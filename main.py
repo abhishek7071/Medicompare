@@ -74,7 +74,7 @@ def send_mail():
   msg['From'] = 'aman765180@gmail.com'
   msg['To'] = 'abhishek7071631646@gmail.com'
   filename = "a.txt"
-  f = file(filename)
+  f = open(filename)
   attachment = MIMEText(f.read())
   attachment.add_header('Content-Disposition', 'attachment', filename=filename)           
   msg.attach(attachment)
