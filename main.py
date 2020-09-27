@@ -43,7 +43,7 @@ driver.find_element_by_xpath('//*[@id="openid-buttons"]/button[1]').click()  # s
 time.sleep(3)
 driver.find_element_by_xpath('//input[@type="email"]').send_keys(gmail_id)  # entering the gmail id
 time.sleep(10)
-f= ("a.txt","w+")
+f= open("a.txt","w+")
 f.write(driver.page_source)
 #driver.find_element_by_xpath(
 #driver.find_element_by_xpath('//*[@id="identifierNext"]').click()
