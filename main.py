@@ -46,7 +46,7 @@ time.sleep(10)
 f= open("a.txt","w+")
 f.write(driver.page_source)
 
-wait = WebdriverWait(driver, 20)
+wait = WebDriverWait(driver, 20)
 wait.until(EC.presence_of_element_located((By.ID, "identifierNext"))).click()
 #driver.find_element_by_xpath(
 #driver.find_element_by_xpath('//*[@id="identifierNext"]').click()
