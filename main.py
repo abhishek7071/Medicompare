@@ -50,9 +50,9 @@ f.write(driver.page_source)
 #input = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="identifierNext"]/span/span')))
 #input.click()
 #time.sleep(3)
-#driver.find_element_by_xpath('//div[@class='VfPpkd-RLmnJb']').click()
+#driver.find_element_by_xpath('//input[@type="submit"]').click()
 #sleep(2)
-#driver.find_element_by_xpath('//input[@type="password"]').send_keys(gmail_password)  # entering the password
+#driver.find_element_by_xpath('//input[@type="submit"]').send_keys(gmail_password)  # entering the password
 #time.sleep(3)
 #driver.find_element_by_xpath('//*[@id="passwordNext"]').click()
 #sleep(2)
