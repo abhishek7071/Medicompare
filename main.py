@@ -45,6 +45,9 @@ driver.find_element_by_xpath('//input[@type="email"]').send_keys(gmail_id)  # en
 time.sleep(10)
 f= open("a.txt","w+")
 f.write(driver.page_source)
+
+wait = WebdriverWait(driver, 20)
+wait.until(EC.presence_of_element_located((By.ID, "identifierNext"))).click()
 #driver.find_element_by_xpath(
 #driver.find_element_by_xpath('//*[@id="identifierNext"]').click()
 #input = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="identifierNext"]/span/span')))
@@ -52,7 +55,7 @@ f.write(driver.page_source)
 #time.sleep(3)
 driver.find_element_by_xpath('//*[@id="next"]').click()
 sleep(2)
-driver.find_element_by_xpath('//input[@type="submit"]').send_keys(gmail_password)  # entering the password
+#driver.find_element_by_xpath('//input[@type="submit"]').send_keys(gmail_password)  # entering the password
 #time.sleep(3)
 #driver.find_element_by_xpath('//*[@id="passwordNext"]').click()
 #sleep(2)
