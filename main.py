@@ -66,7 +66,7 @@ driver.save_screenshot("image.png")
 
   
 # Showing the iamge 
-image.show() 
+#mage.show() 
 def send_mail():
   img_data = open('image.png', 'rb').read()
   msg = MIMEMultipart()
