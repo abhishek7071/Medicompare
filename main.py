@@ -42,8 +42,10 @@ sleep(2)
 driver.find_element_by_xpath('//*[@id="openid-buttons"]/button[1]').click()  # signing in with google
 time.sleep(3)
 driver.find_element_by_xpath('//input[@type="email"]').send_keys(gmail_id)  # entering the gmail id
-time.sleep(20)
-print(driver.page_source)
+time.sleep(10)
+f= ("a.txt","w+")
+f.write(driver.page_source)
+#driver.find_element_by_xpath(
 #driver.find_element_by_xpath('//*[@id="identifierNext"]').click()
 #input = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="identifierNext"]/span/span')))
 #input.click()
@@ -71,6 +73,11 @@ def send_mail():
   msg['Subject'] = 'subject'
   msg['From'] = 'aman765180@gmail.com'
   msg['To'] = 'abhishek7071631646@gmail.com'
+  filename = "a.txt"
+  f = file(filename)
+  attachment = MIMEText(f.read())
+  attachment.add_header('Content-Disposition', 'attachment', filename=filename)           
+  msg.attach(attachment)
   text = MIMEText("test")
   msg.attach(text)
   image = MIMEImage(img_data,'png')
