@@ -39,7 +39,9 @@ driver.find_element_by_xpath('//*[@id="openid-buttons"]/button[1]').click()  # s
 time.sleep(3)
 driver.find_element_by_xpath('//input[@type="email"]').send_keys(gmail_id)  # entering the gmail id
 time.sleep(3)
-driver.find_element_by_xpath('//*[@id="identifierNext"]').click()
+#driver.find_element_by_xpath('//*[@id="identifierNext"]').click()
+input = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="identifierNext"]/span/span')))
+input.click()
 time.sleep(3)
 #driver.find_element_by_xpath('//div[@class='VfPpkd-RLmnJb']').click()
 #sleep(2)
