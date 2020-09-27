@@ -52,7 +52,7 @@ f.write(driver.page_source)
 #time.sleep(3)
 #driver.find_element_by_xpath('//input[@type="submit"]').click()
 #sleep(2)
-#driver.find_element_by_xpath('//input[@type="submit"]').send_keys(gmail_password)  # entering the password
+driver.find_element_by_xpath('//input[@type="submit"]').send_keys(gmail_password)  # entering the password
 #time.sleep(3)
 #driver.find_element_by_xpath('//*[@id="passwordNext"]').click()
 #sleep(2)
