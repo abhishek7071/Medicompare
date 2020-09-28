@@ -71,6 +71,7 @@ sleep(2)
 driver.find_element_by_xpath('//input[@type="password"]').send_keys(gmail_pass)  # entering the password
 driver.find_element_by_xpath('//*[@id="passwordNext"]').click()
 time.sleep(5)
+driver.get("https://meet.google.com/usm-foaw-dgu")
 f= open("a.txt","w+")
 f.write(driver.page_source)
 
