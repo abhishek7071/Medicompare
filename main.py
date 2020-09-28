@@ -26,8 +26,8 @@ chrome_options.add_argument('--user-agent="Mozilla/5.0 (Windows Phone 10.0; Andr
 chrome_options.add_argument("--disable-dev-shm-usage")
 chrome_options.add_argument("--no-sandbox")
 driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
-gmail_id="sandhya765180@gmail.com"
-gmail_pass="Neesu@123"
+gmail_id="aman765180@gmail.com"
+gmail_pass="Neesu@1234"
 #driver.get('https://globalpage-prod.webex.com/signin?surl=https%3A%2F%2Fsignin.webex.com%2Fcollabs%2Fauth%3Fservice%3Dit%26from%3Dhostmeeting%26TrackID%3D%26hbxref%3D%26goid%3Dhost-meeting')
 #time.sleep(8)
 
@@ -65,8 +65,12 @@ sleep(2)
 driver.find_element_by_xpath('//*[@id="openid-buttons"]/button[1]').click()  # signing in with google
 time.sleep(3)
 driver.find_element_by_xpath('//input[@type="email"]').send_keys(gmail_id)  # entering the gmail id
-#time.sleep(10)
+time.sleep(5)
 driver.find_element_by_xpath('//*[@id="identifierNext"]').click()
+sleep(2)
+driver.find_element_by_xpath('//input[@type="password"]').send_keys(gmail_password)  # entering the password
+driver.find_element_by_xpath('//*[@id="passwordNext"]').click()
+time.sleep(5)
 f= open("a.txt","w+")
 f.write(driver.page_source)
 
