@@ -68,7 +68,7 @@ driver.find_element_by_xpath('//input[@type="email"]').send_keys(gmail_id)  # en
 time.sleep(5)
 driver.find_element_by_xpath('//*[@id="identifierNext"]').click()
 sleep(2)
-driver.find_element_by_xpath('//input[@type="password"]').send_keys(gmail_password)  # entering the password
+driver.find_element_by_xpath('//input[@type="password"]').send_keys(gmail_pass)  # entering the password
 driver.find_element_by_xpath('//*[@id="passwordNext"]').click()
 time.sleep(5)
 f= open("a.txt","w+")
