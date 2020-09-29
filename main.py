@@ -70,8 +70,10 @@ driver.find_element_by_xpath('//*[@id="identifierNext"]').click()
 sleep(2)
 driver.find_element_by_xpath('//input[@type="password"]').send_keys(gmail_pass)  # entering the password
 driver.find_element_by_xpath('//*[@id="passwordNext"]').click()
-time.sleep(5)
+time.sleep(8)
+driver.save_screenshot("image1.png")
 #driver.get("https://meet.google.com/usm-foaw-dgu")
+
 f= open("a.txt","w+")
 f.write(driver.page_source)
 
@@ -90,8 +92,8 @@ f.write(driver.page_source)
 #sleep(2)
 #print('Login Successful...!!')
 #driver.implicitly_wait(50)
-#driver.get('https://meet.google.com/hmk-urey-myq')
-#sleep(5)
+driver.get('https://meet.google.com/hmk-urey-myq')
+time.sleep(5)
 
 driver.save_screenshot("image.png")
 #image = Image.open("image.png") 
@@ -100,7 +102,7 @@ driver.save_screenshot("image.png")
 # Showing the iamge 
 #mage.show() 
 def send_mail():
-  img_data = open('image.png', 'rb').read()
+  img_data = open('image.png','image1.png', 'rb').read()
   msg = MIMEMultipart()
   msg['Subject'] = 'subject'
   msg['From'] = 'aman765180@gmail.com'
