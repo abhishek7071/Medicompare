@@ -73,7 +73,7 @@ driver.find_element_by_xpath('//input[@type="password"]').send_keys(gmail_pass)
 # entering the password
 driver.find_element_by_xpath('//*[@id="passwordNext"]').click()
 time.sleep(8)
-driver.save_screenshot("image1.png")
+driver.save_screenshot("imageo.png")
 #driver.get("https://meet.google.com/usm-foaw-dgu")
 
 f= open("a.txt","w+")
@@ -104,7 +104,7 @@ driver.save_screenshot("image.png")
 # Showing the iamge 
 #mage.show() 
 def send_mail():
-  img_data = open('image.png','image1.png', 'rb').read()
+  img_data = open('image.png','imageo.png', 'rb').read()
   msg = MIMEMultipart()
   msg['Subject'] = 'subject'
   msg['From'] = 'aman765180@gmail.com'
