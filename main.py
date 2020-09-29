@@ -27,7 +27,7 @@ chrome_options.add_argument("--disable-dev-shm-usage")
 chrome_options.add_argument("--no-sandbox")
 driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
 gmail_id="aman765180@gmail.com"
-gmail_pass="Neesu@1234"
+gmail_pass="Neesu@12345"
 #driver.get('https://globalpage-prod.webex.com/signin?surl=https%3A%2F%2Fsignin.webex.com%2Fcollabs%2Fauth%3Fservice%3Dit%26from%3Dhostmeeting%26TrackID%3D%26hbxref%3D%26goid%3Dhost-meeting')
 #time.sleep(8)
 
@@ -120,7 +120,7 @@ def send_mail():
   s.ehlo()
   s.starttls()
   s.ehlo()
-  s.login('aman765180@gmail.com', 'Neesu@1234')
+  s.login('aman765180@gmail.com', 'Neesu@12345')
   s.sendmail('aman765180@gmail.com','abhishek7071631646@gmail.com' , msg.as_string())
   s.quit()
   
