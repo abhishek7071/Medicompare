@@ -104,7 +104,7 @@ driver.save_screenshot("image.png")
 # Showing the iamge 
 #mage.show() 
 def send_mail():
-  img_data = open('image.png','imageo.png', 'rb').read()
+  img_data = open('image.png','rb').read()
   msg = MIMEMultipart()
   msg['Subject'] = 'subject'
   msg['From'] = 'aman765180@gmail.com'
