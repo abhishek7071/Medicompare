@@ -67,8 +67,8 @@ time.sleep(3)
 driver.find_element_by_xpath('//input[@type="email"]').send_keys(gmail_id)  # entering the gmail id
 time.sleep(5)
 driver.find_element_by_xpath('//*[@id="identifierNext"]').click()
-sleep(2)
-driver.find_element_by_xpath('//input[@type="password"]').send_keys(gmail_pass)
+sleep(5)
+#driver.find_element_by_xpath('//input[@type="password"]').send_keys(gmail_pass)
 driver.find_element_by_xpath('//input[@type="password"]').send_keys(gmail_pass)
 # entering the password
 driver.find_element_by_xpath('//*[@id="passwordNext"]').click()
