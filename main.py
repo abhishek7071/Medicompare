@@ -60,22 +60,61 @@ gmail_pass="Neesu@12345"
 #time.sleep(3)
 #driver.find_element_by_xpath('//button[@class="el-button next el-button--primary"]').click()
 #time.sleep(3)
-driver.get('https://stackoverflow.com/users/signup?ssrc=head&returnurl=%2fusers%2fstory%2fcurrent%27')  # signing in to google through stack overflow
-sleep(2)
-driver.find_element_by_xpath('//*[@id="openid-buttons"]/button[1]').click()  # signing in with google
-time.sleep(3)
-driver.find_element_by_xpath('//input[@type="email"]').send_keys(gmail_id)  # entering the gmail id
-time.sleep(5)
-driver.find_element_by_xpath('//*[@id="identifierNext"]').click()
-sleep(5)
+#driver.get('https://stackoverflow.com/users/signup?ssrc=head&returnurl=%2fusers%2fstory%2fcurrent%27')  # signing in to google through stack overflow
+#sleep(2)
+#driver.find_element_by_xpath('//*[@id="openid-buttons"]/button[1]').click()  # signing in with google
+#time.sleep(3)
+#driver.find_element_by_xpath('//input[@type="email"]').send_keys(gmail_id)  # entering the gmail id
+#time.sleep(5)
+#driver.find_element_by_xpath('//*[@id="identifierNext"]').click()
+#sleep(5)
 #driver.find_element_by_xpath('//input[@type="password"]').send_keys(gmail_pass)
-driver.find_element_by_xpath('//input[@type="password"]').send_keys(gmail_pass)
+#driver.find_element_by_xpath('//input[@type="password"]').send_keys(gmail_pass)
 # entering the password
-driver.find_element_by_xpath('//*[@id="passwordNext"]').click()
-time.sleep(8)
-driver.save_screenshot("imageo.png")
+#driver.find_element_by_xpath('//*[@id="passwordNext"]').click()
+#time.sleep(8)
+#driver.save_screenshot("imageo.png")
 #driver.get("https://meet.google.com/usm-foaw-dgu")
+driver.get("https://meetingsapac49.webex.com/meet/pr1653564050")
+time.sleep(5)
+#pyautogui.click(100, 100)
+time.sleep(5)
+#elems = driver.find_elements_by_xpath("//a[@href]")
+#for elem in elems:
+#  print(elem.get_attribute("href"))
+#driver.find_element_by_xpath('//*[@id="smartJoinButton"]').click()
+time.sleep(5)
+#print( (driver.page_source).encode('utf-8') )
+#print(driver.page_source)
+#driver.switch_to.frame(driver.find_element_by_id("pb_i"))
+driver.switch_to.frame("pbui_iframe")
+time.sleep(5)
+driver.find_element_by_xpath('//input[@type="text"]').send_keys(gmail_name)
+driver.find_element_by_xpath("//input[@placeholder='Email address']").send_keys(gmail_id)
+driver.find_element_by_xpath("//button[@title='Next']").click()
+time.sleep(5)
+driver.find_element_by_xpath("//button[@title='Got it']").click()
+time.sleep(5)
 
+#f.write(driver.page_source)
+
+#WebDriverWait(driver, 10).until(EC.frame_to_be_available_and_switch_to_it((By.XPATH,"//iframe[@id='pb_iframecontainer' and @name='TargetContent']")))
+
+driver.find_element_by_xpath('//*[@id="interstitial_join_btn"]').click()
+time.sleep(5)
+html = driver.page_source
+soup = BeautifulSoup(html)
+for my_tag in soup.find_all(class_="styles-user-name-gpTpQ"):
+  print(my_tag.text)
+#price=soup.find_all("div" , {"class":"styles-user-name-"}).text
+#print(price)
+#tree=driver.find_elements_by_xpath("//*[@id='meetsimple']")
+#print(tree.text) 
+#or i in tree:
+#   print(i.text)simple
+#//div[contains(@class, ' plist-userListView-2b_DW')
+#div[contains(@class,'plist-userListView-2b_DW')]#f = open("a.txt", "w+")
+#//div[contains(@class,'plist-userListView-2b_DW')]simple
 f= open("a.txt","w+")
 f.write(driver.page_source)
 
@@ -94,8 +133,8 @@ f.write(driver.page_source)
 #sleep(2)
 #print('Login Successful...!!')
 #driver.implicitly_wait(50)
-driver.get('https://meet.google.com/tou-bpxg-tvh')
-time.sleep(5)
+#driver.get('https://meet.google.com/tou-bpxg-tvh')
+#time.sleep(5)
 
 driver.save_screenshot("image.png")
 #image = Image.open("image.png") 
