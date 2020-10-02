@@ -79,12 +79,10 @@ gmail_pass="Neesu@12345"
 driver.get("https://meetingsapac49.webex.com/meet/pr1653564050")
 time.sleep(5)
 #pyautogui.click(100, 100)
-time.sleep(5)
 #elems = driver.find_elements_by_xpath("//a[@href]")
 #for elem in elems:
 #  print(elem.get_attribute("href"))
 #driver.find_element_by_xpath('//*[@id="smartJoinButton"]').click()
-time.sleep(5)
 #print( (driver.page_source).encode('utf-8') )
 #print(driver.page_source)
 #driver.switch_to.frame(driver.find_element_by_id("pb_i"))
