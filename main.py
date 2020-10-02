@@ -93,7 +93,7 @@ driver.find_element_by_xpath("//input[@placeholder='Email address']").send_keys(
 driver.find_element_by_xpath("//button[@title='Next']").click()
 time.sleep(5)
 driver.find_element_by_xpath("//button[@title='Got it']").click()
-time.sleep(5)
+time.sleep(2)
 
 #f.write(driver.page_source)
 
