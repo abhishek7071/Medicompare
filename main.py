@@ -100,8 +100,8 @@ time.sleep(2)
 
 #WebDriverWait(driver, 10).until(EC.frame_to_be_available_and_switch_to_it((By.XPATH,"//iframe[@id='pb_iframecontainer' and @name='TargetContent']")))
 
-#driver.find_element_by_xpath('//*[@id="interstitial_join_btn"]').click()
-#time.sleep(5)
+driver.find_element_by_xpath('//*[@id="interstitial_join_btn"]').click()
+time.sleep(5)
 #html = driver.page_source
 #soup = BeautifulSoup(html)
 #for my_tag in soup.find_all(class_="styles-user-name-gpTpQ"):
