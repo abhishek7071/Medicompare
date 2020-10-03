@@ -1,4 +1,11 @@
 selenium
 gunicorn
-Pillow
-fake-useragent
+Flask
+Flask-RESTful
+gunicorn
+itsdangerous
+Jinja2
+peewee
+Werkzeug
+requests
+bs4
