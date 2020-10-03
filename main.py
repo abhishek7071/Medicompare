@@ -7,6 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
 from PIL import Image
+from bs4 import BeautifulSoup
 import time
 from PIL import Image 
 import os
