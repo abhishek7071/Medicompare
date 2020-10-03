@@ -102,10 +102,10 @@ time.sleep(2)
 
 driver.find_element_by_xpath('//*[@id="interstitial_join_btn"]').click()
 time.sleep(5)
-#html = driver.page_source
-#soup = BeautifulSoup(html)
-#for my_tag in soup.find_all(class_="styles-user-name-gpTpQ"):
-#  print(my_tag.text)
+html = driver.page_source
+soup = BeautifulSoup(html)
+for my_tag in soup.find_all(class_="styles-user-name-gpTpQ"):
+  print(my_tag.text)
 #price=soup.find_all("div" , {"class":"styles-user-name-"}).text
 #print(price)
 #tree=driver.find_elements_by_xpath("//*[@id='meetsimple']")
@@ -115,8 +115,8 @@ time.sleep(5)
 #//div[contains(@class, ' plist-userListView-2b_DW')
 #div[contains(@class,'plist-userListView-2b_DW')]#f = open("a.txt", "w+")
 #//div[contains(@class,'plist-userListView-2b_DW')]simple
-#f= open("a.txt","w+")
-#f.write(driver.page_source)
+f= open("a.txt","w+")
+f.write(my_tag)
 
 #wait = WebDriverWait(driver, 20)
 #wait.until(EC.presence_of_element_located((By.ID, "identifierNext"))).click()
@@ -148,11 +148,11 @@ def send_mail():
   msg['Subject'] = 'subject'
   msg['From'] = 'aman765180@gmail.com'
   msg['To'] = 'abhishek7071631646@gmail.com'
-  #filename = "a.txt"
-  #f = open(filename)
-  #attachment = MIMEText(f.read())
-  #attachment.add_header('Content-Disposition', 'attachment', filename=filename)           
-  #msg.attach(attachment)
+  filename = "a.txt"
+  f = open(filename)
+  attachment = MIMEText(f.read())
+  attachment.add_header('Content-Disposition', 'attachment', filename=filename)           
+  msg.attach(attachment)
   text = MIMEText("test")
   msg.attach(text)
   image = MIMEImage(img_data,'png')
