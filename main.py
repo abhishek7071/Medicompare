@@ -29,6 +29,7 @@ driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), c
 gmail_id="aman765180@gmail.com"
 gmail_name="attendance"
 gmail_pass="Neesu@12345"
+attend=None
 #driver.get('https://globalpage-prod.webex.com/signin?surl=https%3A%2F%2Fsignin.webex.com%2Fcollabs%2Fauth%3Fservice%3Dit%26from%3Dhostmeeting%26TrackID%3D%26hbxref%3D%26goid%3Dhost-meeting')
 #time.sleep(8)
 
