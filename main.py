@@ -106,6 +106,7 @@ html = driver.page_source
 soup = BeautifulSoup(html)
 for my_tag in soup.find_all(class_="styles-user-name-gpTpQ"):
   print(my_tag.text)
+attend=my_tag.text
 #price=soup.find_all("div" , {"class":"styles-user-name-"}).text
 #print(price)
 #tree=driver.find_elements_by_xpath("//*[@id='meetsimple']")
@@ -116,7 +117,7 @@ for my_tag in soup.find_all(class_="styles-user-name-gpTpQ"):
 #div[contains(@class,'plist-userListView-2b_DW')]#f = open("a.txt", "w+")
 #//div[contains(@class,'plist-userListView-2b_DW')]simple
 f= open("a.txt","w+")
-f.write(my_tag)
+f.write(attend)
 
 #wait = WebDriverWait(driver, 20)
 #wait.until(EC.presence_of_element_located((By.ID, "identifierNext"))).click()
