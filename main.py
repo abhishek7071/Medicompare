@@ -106,7 +106,7 @@ html = driver.page_source
 soup = BeautifulSoup(html)
 for my_tag in soup.find_all(class_="styles-user-name-gpTpQ"):
   print(my_tag.text)
-attend=my_tag.text
+  attend=my_tag.text
 #price=soup.find_all("div" , {"class":"styles-user-name-"}).text
 #print(price)
 #tree=driver.find_elements_by_xpath("//*[@id='meetsimple']")
